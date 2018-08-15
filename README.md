@@ -8,6 +8,7 @@
 5. Obviously there are a bunch of magic numbers that would come from some kind of database in real life.
 6. I hacked in a webpack build that I have zero experience with or any real idea of how it works....I would try and learn it.
 
+
 -----------------------------------------------------------------
 I like ServiceStack but had only used the full framework version, so I started with their .NET CORE MVC template...
 -----------------------------------------------------------------

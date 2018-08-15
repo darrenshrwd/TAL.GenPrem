@@ -17,7 +17,7 @@ export default {
   name: 'app',
   data () {
     return {
-      title: 'Vue.js Demo Form'
+      title: 'Calculate your Premium!'
     }
   },
   components: {

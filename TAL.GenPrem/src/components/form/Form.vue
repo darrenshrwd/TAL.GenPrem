@@ -12,16 +12,16 @@
         <div v-if="isErrorField('lastName')" class="invalid-feedback">{{ $t('error.fieldRequired', { field: $t('form.lastName') }) }}</div>
       </div>
       <div class="form-group">
-        <label for="email">{{ $t('form.email') }} *</label>
-        <input type="email" class="form-control" id="email" v-model.lazy.trim="form.email" @blur="onFieldBlur('email')" v-bind:class="getFieldClasses('email')">
-        <div v-if="isErrorField('email')" class="invalid-feedback">{{ $t('error.fieldInvalid', { field: $t('form.email') }) }}</div>
+        <label for="dateOfBirth">{{ $t('form.dateOfBirth') }} *</label>
+        <input type="date" class="form-control" id="dateOfBirth" v-model.lazy.trim="form.dateOfBirth" @blur="onFieldBlur('dateOfBirth')" v-bind:class="getFieldClasses('dateOfBirth')">
+        <div v-if="isErrorField('dateOfBirth')" class="invalid-feedback">{{ $t('error.fieldInvalid', { field: $t('form.dateOfBirth') }) }}</div>
       </div>
       <div class="form-group">
-        <label for="type">{{ $t('form.type') }} *</label>
-        <select id="type" class="form-control" v-model="form.type" @blur="onFieldBlur('type')" v-bind:class="getFieldClasses('type')">
-            <option v-for="type in types" v-bind:key="type.value" v-bind:value="type.value">{{ $t(type.label) }}</option>
+        <label for="type">{{ $t('form.gender') }} *</label>
+        <select id="type" class="form-control" v-model="form.gender" @blur="onFieldBlur('type')" v-bind:class="getFieldClasses('type')">
+            <option v-for="gender in genders" v-bind:key="gender.value" v-bind:value="gender.value">{{ $t(gender.label) }}</option>
         </select>
-        <div v-if="isErrorField('type')" class="invalid-feedback">{{ $t('form.type') }}</div>
+        <div v-if="isErrorField('type')" class="invalid-feedback">{{ $t('form.gender') }}</div>
       </div>
       <div class="form-group">
         <label for="additionalInfo">{{ $t('form.additionalInfo') }}</label>
@@ -68,7 +68,7 @@
       <div class="alert alert-info">
         <p><strong>{{ $t('form.sentInfo' ) }}</strong></p>
         <pre>
-            {{form}}
+            {{result}}
         </pre>
       </div>
       <p class="text-center">

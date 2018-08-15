@@ -33,21 +33,6 @@ namespace TAL.GenPrem.Tests
             Assert.That(response.Result, Is.EqualTo("Hello, World!"));
         }
 
-        /* TAL Digital Technical Test
-
-            Create a Simple Web Application (Technology of your own choice) that demonstrates full-stack development.
-            The application will capture some input from the user, and generate a Premium.
-
-            Input fields:
-            Name
-            Date of Birth
-            Gender
-
-            In the project READ.ME, list out the areas of improvement and refinement if you had a full 2 days to build this application.
-
-            Share the details of your repository for access by the TAL Digital team, and a URL if you have a running application.
-        */
-
         [Test]
         public void CalculateAgeWorksFor50YrsAgoToday()
         {
