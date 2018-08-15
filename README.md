@@ -6,7 +6,7 @@
 4. I have not added any front end tests - personally I would probably need more than 2 days to do that right.
 
 5. Obviously there are a bunch of magic numbers that would come from some kind of database in real life.
-6. There is a bunch of css for carousel, etc I could chop out that came from template.
+6. I hacked in a webpack build that I have zero experience with or any real idea of how it works....I would try and learn it.
 
 -----------------------------------------------------------------
 I like ServiceStack but had only used the full framework version, so I started with their .NET CORE MVC template...
@@ -20,4 +20,13 @@ I like ServiceStack but had only used the full framework version, so I started w
     $ npm install -g @servicestack/cli
 
     $ dotnet-new mvc ProjectName
+-----------------------------------------------------------------
+
+But then I removed all the MVC stuff anyway and totally hacked in an Vue.js example form:
+https://auralinna.blog/post/2018/how-to-build-a-complete-form-with-vue-js
+https://github.com/teroauralinna/vue-demo-form
+
+Copying and modifying the webpack config, to use: 
+https://docs.microsoft.com/en-us/aspnet/core/client-side/spa-services?view=aspnetcore-2.1
+
 
