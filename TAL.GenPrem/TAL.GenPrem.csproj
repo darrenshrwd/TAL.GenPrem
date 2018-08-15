@@ -1,0 +1,18 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="BuildBundlerMinifier" Version="2.8.391" />
+    <PackageReference Include="Microsoft.AspNetCore.App" Version="2.1.*" />
+    <PackageReference Include="ServiceStack" Version="5.*" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\TAL.GenPrem.ServiceInterface\TAL.GenPrem.ServiceInterface.csproj" />
+    <ProjectReference Include="..\TAL.GenPrem.ServiceModel\TAL.GenPrem.ServiceModel.csproj" />
+  </ItemGroup>
+
+</Project>
