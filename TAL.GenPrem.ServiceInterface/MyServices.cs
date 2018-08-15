@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using ServiceStack;
-using ServiceStack.Templates;
-using ServiceStack.DataAnnotations;
+﻿using ServiceStack;
 using TAL.GenPrem.ServiceModel;
 
 namespace TAL.GenPrem.ServiceInterface

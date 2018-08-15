@@ -6,6 +6,8 @@ using TAL.GenPrem.ServiceModel;
 
 namespace TAL.GenPrem.Tests
 {
+    using ServiceModel.Extensions;
+
     public class IntegrationTest
     {
         const string BaseUri = "http://localhost:2000/";
@@ -40,6 +42,23 @@ namespace TAL.GenPrem.Tests
             var response = client.Get(new Hello { Name = "World" });
 
             Assert.That(response.Result, Is.EqualTo("Hello, World!"));
+        }
+
+        [Test]
+        public void Can_call_Premium_Service()
+        {
+            var client = CreateClient();
+
+            const int targetAgeToday = 18;
+            var input = TestingShared.GetPremiumInput(targetAgeToday, "A Rose", "male");
+
+            var age = input.DateOfBirth.CalculateAge();
+            Assert.AreEqual(targetAgeToday, age);
+
+            var premium = PremiumCalculations.CalculatePremium(age, input.Gender);
+
+            var response = client.Post(input);
+            Assert.That(response.Result, Is.EqualTo($"Your premium is ${premium}")); ;
         }
     }
 }
